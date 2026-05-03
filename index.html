@@ -5,50 +5,69 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>AR Cocktail Menu</title>
  <link rel="stylesheet" href="style.css" />
- <!-- model-viewer library -->
- <script type="module"
+ <script type="module" 
  src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
  <main class="app">
- <!-- MENU SCREEN -->
  <section id="menuScreen" class="screen active">
  <h1>AR Cocktail Menu</h1>
- <p class="intro">Choose a cocktail to view it in 3D and AR.</p>
  <div class="grid">
  <button class="cocktail-card"
- data-name="12"
- data-model="assets/models/12.glb"
- data-ios="assets/models/12.usdz"
- data-poster="assets/posters/12.jpg">
- <img src="assets/posters/12.jpg" alt="12">
- <span>12</span>
+ data-name="Flute"
+ data-model="assets/models/1.glb"
+ data-ios="assets/models/1.usdz"
+ data-poster="assets/posters/1.jpg"
+ data-ingredients="Ingredients for Flute will go here.">
+ <img src="assets/posters/1.jpg" alt="Flute">
+ <span>Flute</span>
  </button>
  <button class="cocktail-card"
- data-name="2"
+ data-name="Wine"
  data-model="assets/models/2.glb"
  data-ios="assets/models/2.usdz"
- data-poster="assets/posters/2.jpg">
- <img src="assets/posters/2.jpg" alt="2">
- <span>2</span>
+ data-poster="assets/posters/2.jpg"
+ data-ingredients="Ingredients for Wine will go here.">
+ <img src="assets/posters/2.jpg" alt="Wine">
+ <span>Wine</span>
  </button>
  <button class="cocktail-card"
- data-name="3"
+ data-name="Old Fashioned"
  data-model="assets/models/3.glb"
  data-ios="assets/models/3.usdz"
- data-poster="assets/posters/3.jpg">
- <img src="assets/posters/3.jpg" alt="A3">
- <span>3</span>
+ data-poster="assets/posters/3.jpg"
+ data-ingredients="Ingredients for Old Fashioned will go here.">
+ <img src="assets/posters/3.jpg" alt="Old Fashioned">
+ <span>Old Fashioned</span>
+ </button>
+ <button class="cocktail-card"
+ data-name="Kralica"
+ data-model="assets/models/4.glb"
+ data-ios="assets/models/4.usdz"
+ data-poster="assets/posters/4.jpg"
+ data-ingredients="Ingredients for Kralica will go here.">
+ <img src="assets/posters/4.jpg" alt="Kralica">
+ <span>Kralica</span>
+ </button>
+ <button class="cocktail-card"
+ data-name="Amelie"
+ data-model="assets/models/5.glb"
+ data-ios="assets/models/5.usdz"
+ data-poster="assets/posters/5.jpg"
+ data-ingredients="Ingredients for Amelie will go here.">
+ <img src="assets/posters/5.jpg" alt="Amelie">
+ <span>Amelie</span>
  </button>
  </div>
  </section>
- <!-- 3D / AR VIEWER SCREEN -->
  <section id="viewerScreen" class="screen">
  <button id="backButton" class="back-button">Return To Menu</button>
  <h2 id="cocktailTitle">Cocktail</h2>
+ <div class="viewer-wrap">
  <model-viewer
  id="cocktailViewer"
  src=""
+ ios-src=""
  poster=""
  alt="3D cocktail model"
  ar
@@ -58,12 +77,18 @@
  autoplay
  shadow-intensity="1"
  exposure="1"
- environment-image="neutral"
- style="width: 100%; height: 70vh;">
+ environment-image="neutral">
  </model-viewer>
- <p class="viewer-note">
- On supported mobile devices, use the AR button inside the viewer.
- </p>
+ <img id="cornerImage" class="corner-image" src="" alt="Cocktail image">
+</div>
+<button id="ingredientsButton" class="ingredients-button">Ingredients</button>
+ </section>
+ <section id="ingredientsScreen" class="screen">
+ <button id="backToModelButton" class="back-button">Return To Model</button>
+ <div class="ingredients-panel">
+ <h2 id="ingredientsTitle">Ingredients</h2>
+ <p id="ingredientsText"></p>
+ </div>
  </section>
  </main>
  <script src="script.js"></script>
