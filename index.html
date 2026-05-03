@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>AR Cocktail Menu</title>
  <link rel="stylesheet" href="style.css" />
- <script type="module" 
+ <script type="module"
  src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
  data-model="assets/models/1.glb"
  data-ios="assets/models/1.usdz"
  data-poster="assets/posters/1.jpg"
- data-ingredients="Ingredients for Flute will go here.">
+ data-ingredients="Prosecco, Tatratea, etc.">
  <img src="assets/posters/1.jpg" alt="Flute">
  <span>Flute</span>
  </button>
@@ -27,7 +27,7 @@
  data-model="assets/models/2.glb"
  data-ios="assets/models/2.usdz"
  data-poster="assets/posters/2.jpg"
- data-ingredients="Ingredients for Wine will go here.">
+ data-ingredients="Roku, Chambord, lemon, sugar.">
  <img src="assets/posters/2.jpg" alt="Wine">
  <span>Wine</span>
  </button>
@@ -36,7 +36,7 @@
  data-model="assets/models/3.glb"
  data-ios="assets/models/3.usdz"
  data-poster="assets/posters/3.jpg"
- data-ingredients="Ingredients for Old Fashioned will go here.">
+ data-ingredients="Whisky, Amaretto, Lemon, Sugar.">
  <img src="assets/posters/3.jpg" alt="Old Fashioned">
  <span>Old Fashioned</span>
  </button>
@@ -78,10 +78,13 @@
  shadow-intensity="1"
  exposure="1"
  environment-image="neutral">
+ <button slot="ar-button" class="ar-button">
+ View In AR
+ </button>
  </model-viewer>
  <img id="cornerImage" class="corner-image" src="" alt="Cocktail image">
-</div>
-<button id="ingredientsButton" class="ingredients-button">Ingredients</button>
+ </div>
+ <button id="ingredientsButton" class="ingredients-button">Ingredients</button>
  </section>
  <section id="ingredientsScreen" class="screen">
  <button id="backToModelButton" class="back-button">Return To Model</button>

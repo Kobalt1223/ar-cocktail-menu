@@ -23,8 +23,12 @@ cocktailCards.forEach((card) => {
  currentIngredients = ingredients;
  title.textContent = name;
  viewer.src = model;
- viewer.setAttribute("ios-src", ios);
  viewer.poster = poster;
+ if (ios) {
+ viewer.setAttribute("ios-src", ios);
+ } else {
+ viewer.removeAttribute("ios-src");
+ }
  cornerImage.src = poster;
  cornerImage.alt = name;
  menuScreen.classList.remove("active");
